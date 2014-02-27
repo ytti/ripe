@@ -15,24 +15,39 @@ a. Current policy text
 
 2.0 Assignment Criteria
 
-In order to help decrease global routing complexity, a new AS Number should be used only if a new external routing policy is required, see RFC1930.
+In order to help decrease global routing complexity, a new AS Number should be
+used only if a new external routing policy is required, see RFC1930.
 
 A network must be multihomed in order to qualify for an AS Number.
 
-When requesting an AS Number the routing policy of the Autonomous System must be provided. The new unique routing policy should be defined in RPSL language, as used in the RIPE Database.
+When requesting an AS Number the routing policy of the Autonomous System must
+be provided. The new unique routing policy should be defined in RPSL language,
+as used in the RIPE Database.
 
-The RIPE NCC will assign the AS Number directly to the End User upon a request properly submitted to the RIPE NCC either directly or through a sponsoring LIR. AS Number assignments are subject to the policies described in the RIPE NCC document entitled “Contractual Requirements for Provider Independent Resource Holders in the RIPE NCC Service Region”.
+The RIPE NCC will assign the AS Number directly to the End User upon a request
+properly submitted to the RIPE NCC either directly or through a sponsoring
+LIR. AS Number assignments are subject to the policies described in the RIPE
+NCC document entitled “Contractual Requirements for Provider Independent
+Resource Holders in the RIPE NCC Service Region”.
 -----------------------
 
 b. Proposed policy text
 
 2.0 Assignment Criteria
 
-In order to help decrease global routing complexity, a new AS Number must be used only if a new external routing policy is required, now, or in the forseeable future, see RFC1930 for guidelines.
+In order to help decrease global routing complexity, a new AS Number must be
+used only if a new external routing policy is required, now, or in the
+forseeable future, see RFC1930 for guidelines.
 
-When requesting an AS Number the routing policy of the Autonomous System must be provided. The new unique routing policy should be defined in RPSL language, as used in the RIPE Database.
+When requesting an AS Number the routing policy of the Autonomous System must
+be provided. The new unique routing policy should be defined in RPSL language,
+as used in the RIPE Database.
 
-The RIPE NCC will assign the AS Number directly to the End User upon a request properly submitted to the RIPE NCC either directly or through a sponsoring LIR. AS Number assignments are subject to the policies described in the RIPE NCC document entitled “Contractual Requirements for Provider Independent Resource Holders in the RIPE NCC Service Region”.
+The RIPE NCC will assign the AS Number directly to the End User upon a request
+properly submitted to the RIPE NCC either directly or through a sponsoring
+LIR. AS Number assignments are subject to the policies described in the RIPE
+NCC document entitled “Contractual Requirements for Provider Independent
+Resource Holders in the RIPE NCC Service Region”.
 
 
 11. Rationale
@@ -62,6 +77,6 @@ a. Arguments supporting the proposal
 b. Arguments opposing the proposal
 
 * Someone might attempt to request all available Autonomous System numbers.
-  Large AS Number space (RFC6793) and non-zero yearly recurring cost
-  (modification to current RIPE NCC Charging Scheme is needed) should
-  demotivate such requests.
+   Large AS Number space (RFC6793) and non-zero yearly recurring cost
+   (modification to current RIPE NCC Charging Scheme is needed) should
+   demotivate such requests.

@@ -74,7 +74,7 @@ would be allowed to keep policy short and hard.
 
 a. Arguments supporting the proposal
 
-  * In L3 MPLS VPN managed CE. You may wish to run CustomerLAN <eBGP> CE <eBGP>
+* In L3 MPLS VPN managed CE. You may wish to run CustomerLAN <eBGP> CE <eBGP>
   PE. PE has your regular ASN, every CE in the network can share same AS
   number via use of as-override function and Site of Origin community.
   Private AS number is not good candidate here as CustomerLAN may already use
@@ -83,12 +83,13 @@ a. Arguments supporting the proposal
   creating unnecessary complexity.
 
 * A network might not be multihomed today, but wants to prepare all
-   infrastructure so it can multi-home at a moment's notice, or have some form
-   of mobility in terms of suppliers. <TODO elaborate on nothing wrong with
-   single-homing with your own globally unique AS - does not hurt routing
-   table slots>
+  infrastructure so it can multi-home at a moment's notice, or have some form
+  of mobility in terms of suppliers. <TODO elaborate on nothing wrong with
+  single-homing with your own globally unique AS - does not hurt routing
+  table slots>
 
 b. Arguments opposing the proposal
 
 * Policy is soft, what is acceptable 'technical requirement'? But due to lack
-  of YRC in AS number we cannot have hard+simple policy.
+  of YRC (yearly recurring charge) in AS number we cannot have hard+simple
+  policy.

@@ -67,10 +67,14 @@ In such case your upstream may not exist or in more common case it is
 yourself, which might support reducing requirement from 2 to 1, however when
 upstream is yourself then such validity check is guaranteed not to fail, which
 makes it redundant.
-Due to AS number not carrying YRC we necessarily need to implement some policy
-complexity creep to avoid someone requesting 2**32 AS numbers. The policy
-necessarily will be soft and open to interpretation. With YRC for AS number we
-would be allowed to keep policy short and hard.
+Due to AS number not carrying YRC (yearly recurring charge) we necessarily
+need to implement some policy complexity creep to avoid someone requesting
+2**32 AS numbers. The policy necessarily will be soft and open to
+interpretation. With YRC for AS number we would be allowed to keep policy
+short and hard.
+The intention of the soft policy is that RIPE NCC has understanding shared by
+community of what is valid use of AS number and will interpret request under
+those terms.
 
 a. Arguments supporting the proposal
 
@@ -91,5 +95,4 @@ a. Arguments supporting the proposal
 b. Arguments opposing the proposal
 
 * Policy is soft, what is acceptable 'technical requirement'? But due to lack
-  of YRC (yearly recurring charge) in AS number we cannot have hard+simple
-  policy.
+  of YRC in AS number we cannot have hard+simple policy.

@@ -35,9 +35,8 @@ b. Proposed policy text
 
 2.0 Assignment Criteria
 
-In order to help decrease global routing complexity, a new AS Number must be
-used only if a new external routing policy is required, now, or in the
-foreseeable future, see RFC1930 for guidelines.
+New AS number should only be assigned when there is technical requirement
+which cannot be reasonably satisfied with private AS number.
 
 When requesting an AS Number the routing policy of the Autonomous System must
 be provided. The new unique routing policy should be defined in RPSL language,
@@ -68,24 +67,28 @@ In such case your upstream may not exist or in more common case it is
 yourself, which might support reducing requirement from 2 to 1, however when
 upstream is yourself then such validity check is guaranteed not to fail, which
 makes it redundant.
+Due to AS number not carrying YRC we necessarily need to implement some policy
+complexity creep to avoid someone requesting 2**32 AS numbers. The policy
+necessarily will be soft and open to interpretation. With YRC for AS number we
+would be allowed to keep policy short and hard.
 
 a. Arguments supporting the proposal
 
-* Particular example of such case is L3 MPLS VPN managed CE. You may wish to
-   run CustomerLAN <eBGP> CE <eBGP> PE. PE has your regular ASN, all the CE
-   everywhere in your network can use same ASN (due to as-override and Site of
-   Origin community), but using private ASN in CE is poor practice as
-   CustomerLAN is likely to already use privateASN risking collision.
+  * In L3 MPLS VPN managed CE. You may wish to run CustomerLAN <eBGP> CE <eBGP>
+  PE. PE has your regular ASN, every CE in the network can share same AS
+  number via use of as-override function and Site of Origin community.
+  Private AS number is not good candidate here as CustomerLAN may already use
+  that
+  With current policy you're forced to evaluate CE configuration in each case
+  creating unnecessary complexity.
 
 * A network might not be multihomed today, but wants to prepare all
-   infrastructure so it can multi-home at a moment's notice, or have some form of
-   mobility in terms of suppliers. <TODO elaborate on nothing wrong with
-   single-homing with your own globally unique AS - does not hurt routing table
-   slots>
+   infrastructure so it can multi-home at a moment's notice, or have some form
+   of mobility in terms of suppliers. <TODO elaborate on nothing wrong with
+   single-homing with your own globally unique AS - does not hurt routing
+   table slots>
 
 b. Arguments opposing the proposal
 
-* Someone might attempt to request all available Autonomous System numbers.
-   Large AS Number space (RFC6793) and non-zero yearly recurring cost
-   (modification to current RIPE NCC Charging Scheme is needed) should
-   demotivate such requests.
+* Policy is soft, what is acceptable 'technical requirement'? But due to lack
+  of YRC in AS number we cannot have hard+simple policy.

@@ -1,5 +1,5 @@
 1. Number (assigned by the RIPE NCC)
-2. Remove multihoming requirement from RIPE-525
+2. Remove multihoming requirement from AS number assignment criteria
 3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job.snijders@hibernianetworks.com>
 4. Proposal Version (assigned by the RIPE NCC)
 5. 2014-02-27
@@ -37,7 +37,7 @@ b. Proposed policy text
 
 In order to help decrease global routing complexity, a new AS Number must be
 used only if a new external routing policy is required, now, or in the
-forseeable future, see RFC1930 for guidelines.
+foreseeable future, see RFC1930 for guidelines.
 
 When requesting an AS Number the routing policy of the Autonomous System must
 be provided. The new unique routing policy should be defined in RPSL language,

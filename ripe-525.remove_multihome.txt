@@ -35,7 +35,7 @@ b. Proposed policy text
 
 2.0 Assignment Criteria
 
-New AS number should only be assigned when there is technical requirement
+A new AS number should only be assigned when there is technical requirement
 which cannot be reasonably satisfied with private AS number.
 
 When requesting an AS Number the routing policy of the Autonomous System must

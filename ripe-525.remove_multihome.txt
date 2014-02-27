@@ -49,6 +49,15 @@ LIR. AS Number assignments are subject to the policies described in the RIPE
 NCC document entitled “Contractual Requirements for Provider Independent
 Resource Holders in the RIPE NCC Service Region”.
 
+** FIXME ***
+Basically what I want policy to communicate in RIPE friendly terms. You can
+get ASN if you need to use eBGP and you cannot guarantee uniqueness of
+PriveteASN ahead-of-time.
+Should we have two-level requirement, one for 16b one for 32b? Or should there
+be additional new policy a-like last/8 policy to help conservation of 16b
+ASNs?
+** FIXME **
+
 
 11. Rationale
 Current policy presumes AS numbers are used in globally visible manner,

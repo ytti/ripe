@@ -1,0 +1,67 @@
+1. Number (assigned by the RIPE NCC)
+2. Remove multihoming requirement from RIPE-525
+3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job.snijders@hibernianetworks.com>
+4. Proposal Version (assigned by the RIPE NCC)
+5. 2014-02-27
+6. address-policy-wg@ripe.net
+7. modification
+8. Indefinite
+
+9. Relax Assignment Criteria in RIPE-525
+10. Policy Text
+
+a. Current policy text
+-----------------
+
+2.0 Assignment Criteria
+
+In order to help decrease global routing complexity, a new AS Number should be used only if a new external routing policy is required, see RFC1930.
+
+A network must be multihomed in order to qualify for an AS Number.
+
+When requesting an AS Number the routing policy of the Autonomous System must be provided. The new unique routing policy should be defined in RPSL language, as used in the RIPE Database.
+
+The RIPE NCC will assign the AS Number directly to the End User upon a request properly submitted to the RIPE NCC either directly or through a sponsoring LIR. AS Number assignments are subject to the policies described in the RIPE NCC document entitled “Contractual Requirements for Provider Independent Resource Holders in the RIPE NCC Service Region”.
+-----------------------
+
+b. Proposed policy text
+
+2.0 Assignment Criteria
+
+In order to help decrease global routing complexity, a new AS Number must be used only if a new external routing policy is required, now, or in the forseeable future, see RFC1930 for guidelines.
+
+When requesting an AS Number the routing policy of the Autonomous System must be provided. The new unique routing policy should be defined in RPSL language, as used in the RIPE Database.
+
+The RIPE NCC will assign the AS Number directly to the End User upon a request properly submitted to the RIPE NCC either directly or through a sponsoring LIR. AS Number assignments are subject to the policies described in the RIPE NCC document entitled “Contractual Requirements for Provider Independent Resource Holders in the RIPE NCC Service Region”.
+
+
+11. Rationale
+Current policy presumes AS numbers are used in globally visible manner,
+however there are cases where this is untrue. There are situations where a
+globally unique AS number is required, but there never will be any global
+visibility.
+In such case your upstream may not exist or in more common case it is
+yourself, which might support reducing requirement from 2 to 1, however when
+upstream is yourself then such validity check is guaranteed not to fail, which
+makes it redundant.
+
+a. Arguments supporting the proposal
+
+* Particular example of such case is L3 MPLS VPN managed CE. You may wish to
+   run CustomerLAN <eBGP> CE <eBGP> PE. PE has your regular ASN, all the CE
+   everywhere in your network can use same ASN (due to as-override and Site of
+   Origin community), but using private ASN in CE is poor practice as
+   CustomerLAN is likely to already use privateASN risking collision.
+
+* A network might not be multihomed today, but wants to prepare all
+   infrastructure so it can multi-home at a moment's notice, or have some form of
+   mobility in terms of suppliers. <TODO elaborate on nothing wrong with
+   single-homing with your own globally unique AS - does not hurt routing table
+   slots>
+
+b. Arguments opposing the proposal
+
+* Someone might attempt to request all available Autonomous System numbers.
+  Large AS Number space (RFC6793) and non-zero yearly recurring cost
+  (modification to current RIPE NCC Charging Scheme is needed) should
+  demotivate such requests.

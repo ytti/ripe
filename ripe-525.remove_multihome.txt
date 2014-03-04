@@ -50,10 +50,11 @@ Resource Holders in the RIPE NCC Service Region”.
 
 
 11. Rationale
-Current policy presumes AS numbers are used in globally visible manner,
-however there are cases where this is untrue. There are situations where a
-globally unique AS number is required, but there never will be any global
-visibility.
+Current policy presumes AS numbers are used in globally visible manner with
+redundancy, however there are valid requirements for globally unique AS number
+where one or both of these presumptions are incorrect. There are situations
+where a globally unique AS number is required, but there never will be any
+global visibility.
 In such case your upstream may not exist or in more common case it is
 yourself, which might support reducing requirement from 2 to 1, however when
 upstream is yourself then such validity check is guaranteed not to fail, which
@@ -70,9 +71,15 @@ community of what is valid use of AS number and will interpret request under
 those terms.
 Examples of acceptable technical reasons
   - RFC1930
+  - RFC2270
   - Multihoming
   - Connecting separately maintained private networks
   - Need for global address visibility
+
+We may also need separate 'last n 16b ASN' policy which addresses special
+nature of 16b ASNs. Perhaps limiting 16b ASN 1 per organization or situation
+where BGP community space is required. Perhaps also GLOP should be decoupled
+from ASN to conserve IPv4 multicast addresses.
 
 a. Arguments supporting the proposal
 

@@ -78,7 +78,6 @@ Examples of acceptable technical reasons:
   - Multihoming
   - Preparation to multi-home, but second provider is as of yet deciced.
   - Connecting separately maintained private networks
-  - Need for global address visibility
 
 12. Pro's & Con's
 
@@ -113,7 +112,7 @@ from ASN to conserve IPv4 multicast addresses.
 Because there currently is no yearly cost associated with the registration of
 an ASN this policy might need some policy complexity creep to avoid a small
 group of entities requesting all available AS numbers. The policy necessarily
-will be soft and open to interpretation. If a year cost would be associated
+will be soft and open to interpretation. If a yearly cost would be associated
 with ASNs, the policy would likely be short and hard.
 
 

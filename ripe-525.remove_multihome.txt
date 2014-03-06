@@ -2,7 +2,7 @@
 2. Remove multihoming requirement from AS number assignment criteria
 3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job.snijders@hibernianetworks.com> Hibernia Networks
 4. Proposal Version (assigned by the RIPE NCC)
-5. 2014-02-27
+5. 2014-03-06
 6. address-policy-wg@ripe.net
 7. modification
 8. Indefinite

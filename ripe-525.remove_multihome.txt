@@ -1,14 +1,16 @@
 1. Number (assigned by the RIPE NCC)
 2. Remove multihoming requirement from AS number assignment criteria
-3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job.snijders@hibernianetworks.com>
+3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job.snijders@hibernianetworks.com> Hibernia Networks
 4. Proposal Version (assigned by the RIPE NCC)
 5. 2014-02-27
 6. address-policy-wg@ripe.net
 7. modification
 8. Indefinite
-
 9. Relax Assignment Criteria in RIPE-525
 10. Policy Text
+11. Rationale
+12. Pro's & Con's
+13. Author remarks
 
 a. Current policy text
 -----------------
@@ -33,10 +35,11 @@ Resource Holders in the RIPE NCC Service Region”.
 
 b. Proposed policy text
 
+-----------------------
 2.0 Assignment Criteria
 
 A new AS number should only be assigned when there is technical requirement
-which cannot be reasonably satisfied with private AS number.
+which cannot be reasonably satisfied with a private AS number.
 
 When requesting an AS Number the routing policy of the Autonomous System must
 be provided. The new unique routing policy should be defined in RPSL language,
@@ -47,39 +50,37 @@ properly submitted to the RIPE NCC either directly or through a sponsoring
 LIR. AS Number assignments are subject to the policies described in the RIPE
 NCC document entitled “Contractual Requirements for Provider Independent
 Resource Holders in the RIPE NCC Service Region”.
-
+-----------------------
 
 11. Rationale
-Current policy presumes AS numbers are used in globally visible manner with
-redundancy, however there are valid requirements for globally unique AS number
-where one or both of these presumptions are incorrect. There are situations
+Current policy presumes AS numbers are used in globally visible manner, with
+the Autonomous System being multi-homed to two other Autonomous Systems.
+However there are requirements for a globally unique AS number where one or
+both of these presumptions are incorrect. For instnace there are situations
 where a globally unique AS number is required, but there never will be any
-global visibility.
-In such case your upstream may not exist or in more common case it is
-yourself, which might support reducing requirement from 2 to 1, however when
-upstream is yourself then such validity check is guaranteed not to fail, which
-makes it redundant.
+global visibility. 
 
-Due to AS number not carrying YRC (yearly recurring charge) we necessarily
-need to implement some policy complexity creep to avoid someone requesting
-2**32 AS numbers. The policy necessarily will be soft and open to
-interpretation. With YRC for AS number we would be allowed to keep policy
-short and hard.
+In such case the peerings may not be visible, or in a more common case: one
+might be its own upstream, which supports reducing the peering requirement from
+2 to 1. A common practice (observed by the authors) these days is to have the
+AS applicant fill in as peerings 1) the Autonomous System number of the actual
+provider, and 2) a Route Collector with a globally unique ASN.  The authors
+believe there is value in aligning the policy with reality, rather than
+continuing in the current, less transparent, way.
 
 The intention of the soft policy is that RIPE NCC has understanding shared by
 community of what is valid use of AS number and will interpret request under
 those terms.
-Examples of acceptable technical reasons
+
+Examples of acceptable technical reasons:
   - RFC1930
   - RFC2270
   - Multihoming
+  - Preparation to multi-home, but second provider is as of yet deciced.
   - Connecting separately maintained private networks
   - Need for global address visibility
 
-We may also need separate 'last n 16b ASN' policy which addresses special
-nature of 16b ASNs. Perhaps limiting 16b ASN 1 per organization or situation
-where BGP community space is required. Perhaps also GLOP should be decoupled
-from ASN to conserve IPv4 multicast addresses.
+12. Pro's & Con's
 
 a. Arguments supporting the proposal
 
@@ -101,3 +102,18 @@ b. Arguments opposing the proposal
 
 * Policy is soft, what is acceptable 'technical requirement'? But due to lack
   of YRC in AS number we cannot have hard+simple policy.
+  
+13. Authors' remarks 
+
+We may also need separate 'last n 16b ASN' policy which addresses special
+nature of 16b ASNs. Perhaps limiting 16b ASN 1 per organization or situation
+where BGP community space is required. Perhaps also GLOP should be decoupled
+from ASN to conserve IPv4 multicast addresses.
+
+Because there currently is no yearly cost associated with the registration of
+an ASN this policy might need some policy complexity creep to avoid a small
+group of entities requesting all available AS numbers. The policy necessarily
+will be soft and open to interpretation. If a year cost would be associated
+with ASNs, the policy would likely be short and hard.
+
+

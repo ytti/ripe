@@ -39,7 +39,7 @@ b. Proposed policy text
 2.0 Assignment Criteria
 
 A new AS number should only be assigned when there is technical requirement
-which cannot be reasonably satisfied with a private AS number.
+which cannot be satisfied with an existing or private AS number.
 
 When requesting an AS Number the routing policy of the Autonomous System must
 be provided. The new unique routing policy should be defined in RPSL language,

@@ -2,7 +2,7 @@
 2. Remove multihoming requirement from AS number assignment criteria
 3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@instituut.net> 
 4. Proposal Version (assigned by the RIPE NCC)
-5. 2014-03-06
+5. 2014-04-18
 6. address-policy-wg@ripe.net
 7. modification
 8. Indefinite
@@ -53,12 +53,13 @@ Resource Holders in the RIPE NCC Service Region”.
 -----------------------
 
 11. Rationale
-Current policy presumes AS numbers are used in globally visible manner, with
+
+Current policy presumes AS numbers are used in a globally visible manner, with
 the Autonomous System being multi-homed to two other Autonomous Systems.
-However there are requirements for a globally unique AS number where one or
-both of these presumptions are incorrect. For instnace there are situations
-where a globally unique AS number is required, but there never will be any
-global visibility. 
+However there are requirements for a globally unique AS number where one or both
+of these presumptions are incorrect. For instnace there are situations where a
+globally unique AS number is required, but there never will be any global
+visibility. 
 
 In such case the peerings may not be visible, or in a more common case: one
 might be its own upstream, which supports reducing the peering requirement from
@@ -68,51 +69,56 @@ provider, and 2) a Route Collector with a globally unique ASN.  The authors
 believe there is value in aligning the policy with reality, rather than
 continuing in the current, less transparent, way.
 
-The intention of the soft policy is that RIPE NCC has understanding shared by
-community of what is valid use of AS number and will interpret request under
-those terms.
-
-Examples of acceptable technical reasons:
-  - RFC1930
-  - RFC2270
-  - Multihoming
-  - Preparation to multi-home, but second provider is as of yet deciced.
-  - Connecting separately maintained private networks
+The authors expect the RIPE NCC, when needed, to be capable of applying
+an understanding, shared with the community, of what valid use and need
+embodies and that the NCC will interpret requests under those terms.
+Examples of acceptable technical reasons would be: RFC1930, RFC2270,
+Multihoming, preparation to multi-home, but second provider is as of yet
+deciced, connecting separately maintained private networks.
 
 12. Pro's & Con's
 
 a. Arguments supporting the proposal
 
-* In L3 MPLS VPN managed CE. You may wish to run CustomerLAN <eBGP> CE <eBGP>
-  PE. PE has your regular ASN, every CE in the network can share same AS
-  number via use of as-override function and Site of Origin community.
-  Private AS number is not good candidate here as CustomerLAN may already use
-  that
-  With current policy you're forced to evaluate CE configuration in each case
-  creating unnecessary complexity.
+* In context of layer-3 MPLS VPN, you may wish to run eBGP on the CE both in
+  the PE's direction and the CustomerLAN's direction. The Service Provider's
+  PE has your regular ASN, and every CE in the network could share the same AS
+  number via use of as-override function and Site of Origin community.  But a
+  Private AS number might not be a good candidate as CustomerLAN may already
+  use that AS number.  With current policy you are forced to evaluate CE
+  configuration in each case creating unnecessary complexity.
 
 * A network might not be multihomed today, but wants to prepare all
   infrastructure so it can multi-home at a moment's notice, or have some form
-  of mobility in terms of suppliers. <TODO elaborate on nothing wrong with
-  single-homing with your own globally unique AS - does not hurt routing
-  table slots>
+  of mobility in terms of suppliers. 
 
+* The accuracy of the RIPE Whois Database is more important than anything.
+  The authors suspect that already today organisations deem the value of
+  obtaining a globally unique ASN higher than providing truthful information
+  regarding its peers to the RIPE NCC. By simply not requiring potentially
+  falsified information the process' transparency is increased. 
+  
 b. Arguments opposing the proposal
 
-* Policy is soft, what is acceptable 'technical requirement'? But due to lack
-  of YRC in AS number we cannot have hard+simple policy.
-  
+* What if a company starts hoarding all available AS numbers? There is
+  no yearly charge associated with AS number assignments at the moment of
+  writing. 
+
+* Could it be that previously aggregated prefixes are unbundled and under
+  the new policy the fragments are originated by by a set of Autonomous
+  System with a single, common upstream? 
+
 13. Authors' remarks 
 
-We may also need separate 'last n 16b ASN' policy which addresses special
-nature of 16b ASNs. Perhaps limiting 16b ASN 1 per organization or situation
-where BGP community space is required. Perhaps also GLOP should be decoupled
-from ASN to conserve IPv4 multicast addresses.
+An open question is: "do we need additional text to conserve and fairly hand out
+the remaining 16-bit ASNs, or do we treat all as if they are the same like under
+current policy?". Perhaps limiting the number of 16-bit ASNs per organization,
+expecting the RIPE NCC to perform additional review. 
 
-Because there currently is no yearly cost associated with the registration of
-an ASN this policy might need some policy complexity creep to avoid a small
-group of entities requesting all available AS numbers. The policy necessarily
-will be soft and open to interpretation. If a yearly cost would be associated
-with ASNs, the policy would likely be short and hard.
+Because there currently is no yearly cost associated with the registration of an
+ASN this policy might need some policy complexity creep to avoid a small group
+of entities requesting all available AS numbers. The policy necessarily will be
+soft and open to interpretation.  If a yearly cost would be associated with
+ASNs, the authors foresee less complications. 
 
 

@@ -54,17 +54,16 @@ Resource Holders in the RIPE NCC Service Region”.
 
 11. Rationale
 
-Current policy presumes AS numbers are used in a globally visible manner, with
-the Autonomous System being multi-homed to two other Autonomous Systems.
-However there are requirements for a globally unique AS number where one or both
-of these presumptions are incorrect. For instnace there are situations where a
-globally unique AS number is required, but there never will be any global
-visibility. 
+The current policy assumes that Autonomous Systems, and its peerings are
+globally visible, with the Autonomous System being multi-homed to at least two
+other Autonomous Systems. However there are situations when one requires a
+globally unique AS number where one or both of these presumptions is incorrect.
+Limited visbility is observed in the context of GRX peering, or a more common
+case: one might be its own upstream, which supports reducing the peering
+requirement from two to one.
 
-In such case the peerings may not be visible, or in a more common case: one
-might be its own upstream, which supports reducing the peering requirement from
-2 to 1. A common practice (observed by the authors) these days is to have the
-AS applicant fill in as peerings 1) the Autonomous System number of the actual
+A common practice (observed by the authors) these days is to have the AS
+applicant fill in as peerings 1) the Autonomous System number of the actual
 provider, and 2) a Route Collector with a globally unique ASN.  The authors
 believe there is value in aligning the policy with reality, rather than
 continuing in the current, less transparent, way.

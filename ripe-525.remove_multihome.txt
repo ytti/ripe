@@ -13,24 +13,26 @@
 13. Author remarks
 
 a. Current policy text
------------------
+----------------------
 
 2.0 Assignment Criteria
 
-In order to help decrease global routing complexity, a new AS Number should be
-used only if a new external routing policy is required, see RFC1930.
+In order to help decrease global routing complexity, a new AS Number
+should be used only if a new external routing policy is required, see
+RFC1930.
 
 A network must be multihomed in order to qualify for an AS Number.
 
-When requesting an AS Number the routing policy of the Autonomous System must
-be provided. The new unique routing policy should be defined in RPSL language,
-as used in the RIPE Database.
+When requesting an AS Number the routing policy of the Autonomous System
+must be provided. The new unique routing policy should be defined in
+RPSL language, as used in the RIPE Database.
 
-The RIPE NCC will assign the AS Number directly to the End User upon a request
-properly submitted to the RIPE NCC either directly or through a sponsoring
-LIR. AS Number assignments are subject to the policies described in the RIPE
-NCC document entitled “Contractual Requirements for Provider Independent
-Resource Holders in the RIPE NCC Service Region”.
+The RIPE NCC will assign the AS Number directly to the End User upon a
+request properly submitted to the RIPE NCC either directly or through a
+sponsoring LIR.  AS Number assignments are subject to the policies
+described in the RIPE NCC document entitled “Contractual Requirements
+for Provider Independent Resource Holders in the RIPE NCC Service
+Region”.
 -----------------------
 
 b. Proposed policy text
@@ -38,35 +40,37 @@ b. Proposed policy text
 -----------------------
 2.0 Assignment Criteria
 
-A new AS number should only be assigned when there is technical requirement
-which cannot be satisfied with an existing or private AS number.
+A new AS number should only be assigned when there is technical
+requirement which cannot be satisfied with an existing or private AS
+number.
 
-When requesting an AS Number the routing policy of the Autonomous System must
-be provided. The new unique routing policy should be defined in RPSL language,
-as used in the RIPE Database.
+When requesting an AS Number the routing policy of the Autonomous System
+must be provided. The new unique routing policy should be defined in
+RPSL language, as used in the RIPE Database.
 
-The RIPE NCC will assign the AS Number directly to the End User upon a request
-properly submitted to the RIPE NCC either directly or through a sponsoring
-LIR. AS Number assignments are subject to the policies described in the RIPE
-NCC document entitled “Contractual Requirements for Provider Independent
-Resource Holders in the RIPE NCC Service Region”.
+The RIPE NCC will assign the AS Number directly to the End User upon a
+request properly submitted to the RIPE NCC either directly or through a
+sponsoring LIR.  AS Number assignments are subject to the policies
+described in the RIPE NCC document entitled “Contractual Requirements
+for Provider Independent Resource Holders in the RIPE NCC Service
+Region”.
 -----------------------
 
 11. Rationale
 
 The current policy assumes that Autonomous Systems, and its peerings are
-globally visible, with the Autonomous System being multi-homed to at least two
-other Autonomous Systems. However there are situations when one requires a
-globally unique AS number where one or both of these presumptions is incorrect.
-Limited visbility is observed in the context of GRX peering, or a more common
-case: one might be its own upstream, which supports reducing the peering
-requirement from two to one.
+globally visible, with the Autonomous System being multi-homed to at
+least two other Autonomous Systems. However there are situations when
+one requires a globally unique AS number where one or both of these
+presumptions is incorrect.  Limited visbility is observed in the context
+of GRX peering, or a more common case: one might be its own upstream,
+which supports reducing the peering requirement from two to one.
 
 A common practice (observed by the authors) these days is to have the AS
-applicant fill in as peerings 1) the Autonomous System number of the actual
-provider, and 2) a Route Collector with a globally unique ASN.  The authors
-believe there is value in aligning the policy with reality, rather than
-continuing in the current, less transparent, way.
+applicant fill in as peerings 1) the Autonomous System number of the
+actual provider, and 2) a Route Collector with a globally unique ASN.
+The authors believe there is value in aligning the policy with reality,
+rather than continuing in the current, less transparent, way.
 
 The authors expect the RIPE NCC, when needed, to be capable of applying
 an understanding, shared with the community, of what valid use and need
@@ -79,29 +83,31 @@ deciced, connecting separately maintained private networks.
 
 a. Arguments supporting the proposal
 
-* In context of layer-3 MPLS VPN, you may wish to run eBGP on the CE both in
-  the PE's direction and the CustomerLAN's direction. The Service Provider's
-  PE has your regular ASN, and every CE in the network could share the same AS
-  number via use of as-override function and Site of Origin community.  But a
-  Private AS number might not be a good candidate as CustomerLAN may already
-  use that AS number.  With current policy you are forced to evaluate CE
-  configuration in each case creating unnecessary complexity.
-
+* In context of layer-3 MPLS VPN, you may wish to run eBGP on the CE both
+  in the PE's direction and the CustomerLAN's direction. The Service
+  Provider's PE has your regular ASN, and every CE in the network could
+  share the same AS number via use of as-override function and Site of
+  Origin community.  But a Private AS number might not be a good
+  candidate as CustomerLAN may already use that AS number.  With current
+  policy you are forced to evaluate CE configuration in each case
+  creating unnecessary complexity.
+ 
 * A network might not be multihomed today, but wants to prepare all
-  infrastructure so it can multi-home at a moment's notice, or have some form
-  of mobility in terms of suppliers. 
+  infrastructure so it can multi-home at a moment's notice, or have some
+  form of mobility in terms of suppliers. 
 
 * The accuracy of the RIPE Whois Database is more important than anything.
   The authors suspect that already today organisations deem the value of
-  obtaining a globally unique ASN higher than providing truthful information
-  regarding its peers to the RIPE NCC. By simply not requiring potentially
-  falsified information the process' transparency is increased. 
+  obtaining a globally unique ASN higher than providing truthful
+  information regarding its peers to the RIPE NCC. By simply not
+  requiring potentially falsified information the process' transparency
+  is increased. 
   
 b. Arguments opposing the proposal
 
 * What if a company starts hoarding all available AS numbers? There is
-  no yearly charge associated with AS number assignments at the moment of
-  writing. 
+  no yearly charge associated with AS number assignments at the moment
+  of writing. 
 
 * Could it be that previously aggregated prefixes are unbundled and under
   the new policy the fragments are originated by by a set of Autonomous
@@ -109,15 +115,17 @@ b. Arguments opposing the proposal
 
 13. Authors' remarks 
 
-An open question is: "do we need additional text to conserve and fairly hand out
-the remaining 16-bit ASNs, or do we treat all as if they are the same like under
-current policy?". Perhaps limiting the number of 16-bit ASNs per organization,
-expecting the RIPE NCC to perform additional review. 
+An open question is: "do we need additional text to conserve and fairly
+hand out the remaining 16-bit ASNs, or do we treat all as if they are
+the same like under current policy?". Perhaps limiting the number of
+16-bit ASNs per organization, expecting the RIPE NCC to perform
+additional review. 
 
-Because there currently is no yearly cost associated with the registration of an
-ASN this policy might need some policy complexity creep to avoid a small group
-of entities requesting all available AS numbers. The policy necessarily will be
-soft and open to interpretation.  If a yearly cost would be associated with
-ASNs, the authors foresee less complications. 
+Because there currently is no yearly cost associated with the
+registration of an ASN this policy might need some policy complexity
+creep to avoid a small group of entities requesting all available AS
+numbers. The policy necessarily will be soft and open to interpretation.
+If a yearly cost would be associated with ASNs, the authors foresee less
+complications. 
 
 

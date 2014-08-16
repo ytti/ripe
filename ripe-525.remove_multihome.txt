@@ -40,8 +40,6 @@ b. Proposed policy text
 -----------------------
 2.0 Assignment Criteria
 
-2.0 Assignment Criteria
-
 A new AS Number should only be assigned when the End User expresses a need that
 cannot be satisfied with an existing AS Number. RIPE NCC will record, but not
 evaluate this need.

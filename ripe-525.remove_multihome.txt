@@ -119,12 +119,6 @@ b. Arguments opposing the proposal
 
 13. Authors' remarks
 
-An open question is: "do we need additional text to conserve and fairly
-hand out the remaining 16-bit ASNs, or do we treat all as if they are
-the same like under current policy?". Perhaps limiting the number of
-16-bit ASNs per organization, expecting the RIPE NCC to perform
-additional review.
-
 Because there currently is no yearly cost associated with the
 registration of an ASN this policy might need some policy complexity
 creep to avoid a small group of entities requesting all available AS

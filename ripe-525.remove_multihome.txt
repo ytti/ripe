@@ -40,13 +40,17 @@ b. Proposed policy text
 -----------------------
 2.0 Assignment Criteria
 
-A new AS number should only be assigned when there is technical
-requirement which cannot be satisfied with an existing or private AS
-number.
+In order to conserve RFC1997 BGP commmunity space, a new 16 bit AS Number
+should be used only if a new external routing policy is required, see RFC1930.
 
-When requesting an AS Number the routing policy of the Autonomous System
-must be provided. The new unique routing policy should be defined in
+A network must be multihomed in order to qualify for an 16 bit AS Number.
+
+When requesting an 16 bit AS Number the routing policy of the Autonomous
+System must be provided. The new unique routing policy should be defined in
 RPSL language, as used in the RIPE Database.
+
+When requesting an 32 bit AS number routing policy or multihome requirement do
+not apply.
 
 The RIPE NCC will assign the AS Number directly to the End User upon a
 request properly submitted to the RIPE NCC either directly or through a

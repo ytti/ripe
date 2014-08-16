@@ -1,6 +1,6 @@
 1. Number (assigned by the RIPE NCC)
 2. Remove multihoming requirement from AS number assignment criteria
-3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@instituut.net> 
+3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@instituut.net>
 4. Proposal Version (assigned by the RIPE NCC)
 5. 2014-04-18
 6. address-policy-wg@ripe.net
@@ -91,41 +91,41 @@ a. Arguments supporting the proposal
   candidate as CustomerLAN may already use that AS number.  With current
   policy you are forced to evaluate CE configuration in each case
   creating unnecessary complexity.
- 
+
 * A network might not be multihomed today, but wants to prepare all
   infrastructure so it can multi-home at a moment's notice, or have some
-  form of mobility in terms of suppliers. 
+  form of mobility in terms of suppliers.
 
 * The accuracy of the RIPE Whois Database is more important than anything.
   The authors suspect that already today organisations deem the value of
   obtaining a globally unique ASN higher than providing truthful
   information regarding its peers to the RIPE NCC. By simply not
   requiring potentially falsified information the process' transparency
-  is increased. 
-  
+  is increased.
+
 b. Arguments opposing the proposal
 
 * What if a company starts hoarding all available AS numbers? There is
   no yearly charge associated with AS number assignments at the moment
-  of writing. 
+  of writing.
 
 * Could it be that previously aggregated prefixes are unbundled and under
   the new policy the fragments are originated by by a set of Autonomous
-  System with a single, common upstream? 
+  System with a single, common upstream?
 
-13. Authors' remarks 
+13. Authors' remarks
 
 An open question is: "do we need additional text to conserve and fairly
 hand out the remaining 16-bit ASNs, or do we treat all as if they are
 the same like under current policy?". Perhaps limiting the number of
 16-bit ASNs per organization, expecting the RIPE NCC to perform
-additional review. 
+additional review.
 
 Because there currently is no yearly cost associated with the
 registration of an ASN this policy might need some policy complexity
 creep to avoid a small group of entities requesting all available AS
 numbers. The policy necessarily will be soft and open to interpretation.
 If a yearly cost would be associated with ASNs, the authors foresee less
-complications. 
+complications.
 
 

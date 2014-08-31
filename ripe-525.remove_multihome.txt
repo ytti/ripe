@@ -40,13 +40,15 @@ b. Proposed policy text
 -----------------------
 2.0 Assignment Criteria
 
-A new AS Number should only be assigned when the End User expresses a need that
-cannot be satisfied with an existing AS Number. RIPE NCC will record, but not
-evaluate this need.
+A new AS Number is only assigned when the End User has a need that cannot be
+satisfied with an existing AS Number. RIPE NCC will record, but not evaluate
+this need.
 
-When requesting a 16 bit AS Number, the network must be multihomed using the
-assigned AS Number within 6 months. A 32 bit AS Number is exempt from the
-multihoming requirement.
+To discourage excessive resource consumption, the sum of AS Numbers assigned or
+sponsored by a single Local Internet Registry may not exceed one-thousand.
+
+When requesting a 16 bit AS Number, the network must be multihomed. A 32 bit AS
+Number is exempt from the multihoming requirement.
 
 When requesting an AS Number, the routing policy of the Autonomous System must
 be provided. The new unique routing policy should be defined in RPSL language,

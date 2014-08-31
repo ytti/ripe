@@ -47,8 +47,10 @@ this need.
 To discourage excessive resource consumption, the sum of AS Numbers assigned or
 sponsored by a single Local Internet Registry may not exceed one-thousand.
 
-When requesting a 16 bit AS Number, the network must be multihomed. A 32 bit AS
-Number is exempt from the multihoming requirement.
+When requesting a 16 bit AS Number, the network must be multihomed within 9
+months after the assignment. Failure to multihome within this timeframe will
+result in de-registration of the assignment. A 32 bit AS Number is exempt from
+the multihoming requirement.
 
 When requesting an AS Number, the routing policy of the Autonomous System must
 be provided. The new unique routing policy should be defined in RPSL language,

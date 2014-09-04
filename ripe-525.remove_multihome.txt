@@ -1,6 +1,6 @@
 1. Number (assigned by the RIPE NCC)
 2. Remove multihoming requirement from AS number assignment criteria
-3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@instituut.net>
+3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@ntt.net> NTT
 4. Proposal Version (assigned by the RIPE NCC)
 5. 2014-04-18
 6. address-policy-wg@ripe.net

@@ -80,12 +80,12 @@ actual provider, and 2) a Route Collector with a globally unique ASN.
 The authors believe there is value in aligning the policy with reality,
 rather than continuing in the current, less transparent, way.
 
-The authors expect the RIPE NCC, when needed, to be capable of applying
-an understanding, shared with the community, of what valid use and need
-embodies and that the NCC will interpret requests under those terms.
-Examples of acceptable technical reasons would be: RFC1930, RFC2270,
-Multihoming, preparation to multi-home, but second provider is as of yet
-deciced, connecting separately maintained private networks.
+The authors expect that the RIPE NCC, when needed, will present aggregated
+view of AS multihoming needs for community's consideration.
+Examples of typical needs would be: RFC1930, RFC2270, Multihoming, preparation
+to multi-home, but second provider is as of yet deciced, connecting separately
+maintained private networks and private networks where uniqueness of private
+ASN cannot be guaranteed.
 
 12. Pro's & Con's
 
@@ -113,21 +113,16 @@ a. Arguments supporting the proposal
 
 b. Arguments opposing the proposal
 
-* What if a company starts hoarding all available AS numbers? There is
-  no yearly charge associated with AS number assignments at the moment
-  of writing.
-
 * Could it be that previously aggregated prefixes are unbundled and under
   the new policy the fragments are originated by by a set of Autonomous
   System with a single, common upstream?
 
 13. Authors' remarks
 
-Because there currently is no yearly cost associated with the
-registration of an ASN this policy might need some policy complexity
-creep to avoid a small group of entities requesting all available AS
-numbers. The policy necessarily will be soft and open to interpretation.
-If a yearly cost would be associated with ASNs, the authors foresee less
-complications.
+Because there currently is no yearly cost associated with the registration of
+an ASN this policy reimplements YRC by limiting how many AS numbers LIR can
+register.
+It is perfectly acceptable to register new LIR for sole purpose of attaining
+more AS numbers.
 
 

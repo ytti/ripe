@@ -80,12 +80,12 @@ actual provider, and 2) a Route Collector with a globally unique ASN.
 The authors believe there is value in aligning the policy with reality,
 rather than continuing in the current, less transparent, way.
 
-The authors expect that the RIPE NCC, when needed, will present aggregated
-view of AS multihoming needs for community's consideration.
-Examples of typical needs would be: RFC1930, RFC2270, Multihoming, preparation
-to multi-home, but second provider is as of yet deciced, connecting separately
-maintained private networks and private networks where uniqueness of private
-ASN cannot be guaranteed.
+The authors expect that the RIPE NCC, when needed, will present aggregated view
+of AS multihoming needs for community's consideration.  Examples of typical
+needs would be: RFC1930, RFC2270, multihoming, preparation to Multihoming (but
+second provider is as of yet undeciced), connecting separately maintained
+private networks and private networks where uniqueness of private ASN cannot be
+guaranteed.
 
 12. Pro's & Con's
 
@@ -119,10 +119,8 @@ b. Arguments opposing the proposal
 
 13. Authors' remarks
 
-Because there currently is no yearly cost associated with the registration of
-an ASN this policy reimplements YRC by limiting how many AS numbers LIR can
-register.
-It is perfectly acceptable to register new LIR for sole purpose of attaining
-more AS numbers.
-
-
+There currently is no yearly cost associated with the registration of an ASN
+this policy, however, this policy proposal in essence implements a yearly
+recurring fee because the amount of AS numbers per LIR is limited. When an
+organisation needs to sponsor more than one-thousand ASNs, it is recommended to
+set-up a new, extra, LIR with RIPE NCC. One organisation can be multiple LIRs.

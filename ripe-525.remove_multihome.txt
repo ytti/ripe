@@ -52,8 +52,8 @@ months of the assignment. Failure to multihome within this timeframe will
 result in deregistration of the assignment. A 32-bit AS Number is exempt from
 the multihoming requirement.
 
-The Autonomous System's routing policy should be defined in RPSL language, as
-used in the RIPE Database.
+The Autonomous System's routing policy should be defined with RPSL in the RIPE
+RIPE Database.
 
 The RIPE NCC will assign the AS Number directly to the End User upon a request
 that is properly submitted to the RIPE NCC either directly or through a

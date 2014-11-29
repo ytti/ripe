@@ -1,6 +1,6 @@
 ﻿1. Number 2014-03
 2. Remove Multihoming Requirement from AS Number Assignment Criteria
-3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@ntt.net> NTT
+3. Saku Ytti <saku.ytti@dna.fi> DNA Oy, Job Snijders <job@ntt.net> NTT
 4. Proposal Version v2.0
 5. 2014-10-23
 6. address-policy-wg@ripe.net

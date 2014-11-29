@@ -1,12 +1,12 @@
-1. Number (assigned by the RIPE NCC)
-2. Remove multihoming requirement from AS number assignment criteria
+﻿1. Number 2014-03
+2. Remove Multihoming Requirement from AS Number Assignment Criteria
 3. Saku Ytti <ytti@tdc.net> TDC Oy, Job Snijders <job@ntt.net> NTT
-4. Proposal Version (assigned by the RIPE NCC)
-5. 2014-04-18
+4. Proposal Version v2.0
+5. 2014-10-23
 6. address-policy-wg@ripe.net
 7. modification
 8. Indefinite
-9. Relax Assignment Criteria in RIPE-525
+9. Relax Assignment Criteria in ripe-525
 10. Policy Text
 11. Rationale
 12. Pro's & Con's
@@ -44,83 +44,82 @@ A new AS Number is only assigned when the End User has a need that cannot be
 satisfied with an existing AS Number. RIPE NCC will record, but not evaluate
 this need.
 
-To discourage excessive resource consumption, the sum of AS Numbers assigned to
-a single organisation may not exceed one-thousand.
+To discourage excessive resource consumption, the sum of AS Numbers assigned
+to a single organisation must not exceed 1,000.
 
-When requesting a 16 bit AS Number, the network must be multihomed within 9
-months after the assignment. Failure to multihome within this timeframe will
-result in de-registration of the assignment. A 32 bit AS Number is exempt from
+When requesting a 16-bit AS Number, the network must be multihomed within nine
+months of the assignment. Failure to multihome within this timeframe will
+result in deregistration of the assignment. A 32-bit AS Number is exempt from
 the multihoming requirement.
 
-When requesting an AS Number, the routing policy of the Autonomous System must
-be provided. The new unique routing policy should be defined in RPSL language,
-as used in the RIPE Database.
+The Autonomous System's routing policy should be defined in RPSL language, as
+used in the RIPE Database.
 
 The RIPE NCC will assign the AS Number directly to the End User upon a request
-properly submitted to the RIPE NCC either directly or through a sponsoring LIR.
-AS Number assignments are subject to the policies described in the RIPE
-Document “Contractual Requirements for Provider Independent Resource Holders in
-the RIPE NCC Service Region”.
+that is properly submitted to the RIPE NCC either directly or through a
+sponsoring LIR. AS Number assignments are subject to the policies described in
+the RIPE Document, “Contractual Requirements for Provider Independent Resource
+Holders in the RIPE NCC Service Region”.
 
 -----------------------
 
 11. Rationale
 
-The current policy assumes that Autonomous Systems, and its peerings are
-globally visible, with the Autonomous System being multi-homed to at
-least two other Autonomous Systems. However there are situations when
-one requires a globally unique AS number where one or both of these
-presumptions is incorrect.  Limited visbility is observed in the context
-of GRX peering, or a more common case: one might be its own upstream,
-which supports reducing the peering requirement from two to one.
+The current policy assumes that an Autonomous System and its peerings are
+globally visible, with the Autonomous System being multihomed with at least
+two others. However, there are situations when a globally unique AS Number is
+required and one or both of these presumptions are incorrect. Limited
+visibility is observed in the context of GRX peering, or a more common case: a
+network might be its own upstream, which supports reducing the peering
+requirement from two to one.
 
-A common practice (observed by the authors) these days is to have the AS
-applicant fill in as peerings 1) the Autonomous System number of the
-actual provider, and 2) a Route Collector with a globally unique ASN.
-The authors believe there is value in aligning the policy with reality,
-rather than continuing in the current, less transparent, way.
+A common practice these days (observed by the authors) is to have the AS
+applicant fill in as peerings: 1) the AS Number of the actual provider, and 2)
+a route collector with a globally unique ASN. The authors believe that there
+is value in aligning the policy with reality, rather than continuing in the
+current, less transparent way.
 
-The authors expect that the RIPE NCC, when needed, will present aggregated view
-of AS multihoming needs for community's consideration. Examples of typical
-needs would be: RFC1930, RFC2270, multihoming, preparation to Multihoming (when
-second provider is as of yet undeciced), connecting separately maintained
-private networks and private networks where uniqueness of private ASN cannot be
+The authors expect that the RIPE NCC, when needed, will present an aggregated
+view of AS needs for community consideration. Examples of typical needs would
+be: RFC 1930, RFC 2270, multihoming, preparing to multihome (when second
+provider is as-of-yet undeciced), connecting separately maintained private
+networks, and private networks where the uniqueness of a private ASN cannot be
 guaranteed.
 
 12. Pro's & Con's
 
 a. Arguments supporting the proposal
 
-* In context of layer-3 MPLS VPN, you may wish to run eBGP on the CE both
+* In the context of layer-3 MPLS VPN, you may wish to run eBGP on the CE both
   in the PE's direction and the CustomerLAN's direction. The Service
-  Provider's PE has your regular ASN, and every CE in the network could
-  share the same AS number via use of as-override function and Site of
-  Origin community.  But a Private AS number might not be a good
-  candidate as CustomerLAN may already use that AS number.  With current
-  policy you are forced to evaluate CE configuration in each case
-  creating unnecessary complexity.
+  Provider's PE has your regular ASN, and every CE in the network could share
+  the same AS Number via use of as-override function and Site of Origin
+  community.  But a Private AS Number might not be a good candidate, as the
+  CustomerLAN may already use that AS Number.  With the current policy you are
+  forced to evaluate CE configuration in each case, creating unnecessary
+  complexity.
 
 * A network might not be multihomed today, but wants to prepare all
-  infrastructure so it can multi-home at a moment's notice, or have some
-  form of mobility in terms of suppliers.
+  infrastructure so it can multihome at a moment's notice, or have some form
+  of mobility in terms of suppliers.
 
-* The accuracy of the RIPE Whois Database is more important than anything.
-  The authors suspect that already today organisations deem the value of
-  obtaining a globally unique ASN higher than providing truthful
-  information regarding its peers to the RIPE NCC. By simply not
-  requiring potentially falsified information the process' transparency
-  is increased.
+* The accuracy of the RIPE Database is more important than anything. The
+  authors suspect that already today organisations deem the value of obtaining
+  a globally unique ASN higher than providing truthful information regarding
+  its peers to the RIPE NCC. By simply not requiring potentially falsified
+  information the process's transparency is increased.
 
 b. Arguments opposing the proposal
 
-* Could it be that previously aggregated prefixes are unbundled and under
-  the new policy the fragments are originated by by a set of Autonomous
-  System with a single, common upstream?
+* Could it be that previously aggregated prefixes are unbundled and, under the
+  new policy, the fragments are originated by a set of Autonomous Systems with
+  a single, common upstream?
 
 13. Authors' remarks
 
-The "one-thousand ASNs per organisation" anti-hoarding number is based on the
+The "1,000 ASNs per organisation" anti-hoarding number is based on the
 following: at the moment of writing, the largest amount of ASNs a single
-organisation has is 100. Setting the number at tenfold current maximum usage
-will allow for growth but prevent a single organisation from consuming all
-resources.
+organisation has is 100. Setting the number at ten times the current maximum
+usage will allow for growth but prevent a single organisation from consuming
+all resources.
+

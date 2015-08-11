@@ -1,8 +1,8 @@
 ﻿1. Number 2014-03
 2. Remove Multihoming Requirement from AS Number Assignment Criteria
-3. Saku Ytti <saku.ytti@dna.fi> DNA Oy, Job Snijders <job@ntt.net> NTT
-4. Proposal Version v2.0
-5. 2014-10-23
+3. Saku Ytti <ytti@ntt.net> NTT Communications, Job Snijders <job@ntt.net> NTT Communications
+4. Proposal Version v4.0
+5. 2015-08-11
 6. address-policy-wg@ripe.net
 7. modification
 8. Indefinite
@@ -30,9 +30,9 @@ RPSL language, as used in the RIPE Database.
 The RIPE NCC will assign the AS Number directly to the End User upon a
 request properly submitted to the RIPE NCC either directly or through a
 sponsoring LIR.  AS Number assignments are subject to the policies
-described in the RIPE NCC document entitled “Contractual Requirements
+described in the RIPE NCC document entitled "Contractual Requirements
 for Provider Independent Resource Holders in the RIPE NCC Service
-Region”.
+Region".
 -----------------------
 
 b. Proposed policy text
@@ -43,14 +43,6 @@ b. Proposed policy text
 A new AS Number is only assigned when the End User has a need that cannot be
 satisfied with an existing AS Number. RIPE NCC will record, but not evaluate
 this need.
-
-To discourage excessive resource consumption, the sum of AS Numbers assigned
-to a single organisation must not exceed 1,000.
-
-When requesting a 16-bit AS Number, the network must be multihomed within nine
-months of the assignment. Failure to multihome within this timeframe will
-result in deregistration of the assignment. A 32-bit AS Number is exempt from
-the multihoming requirement.
 
 The Autonomous System's routing policy should be defined with RPSL in the RIPE
 RIPE Database.
@@ -111,15 +103,8 @@ a. Arguments supporting the proposal
 
 b. Arguments opposing the proposal
 
-* Could it be that previously aggregated prefixes are unbundled and, under the
-  new policy, the fragments are originated by a set of Autonomous Systems with
-  a single, common upstream?
+* An adversary could try to deplete the pool of available ASNs.
 
 13. Authors' remarks
 
-The "1,000 ASNs per organisation" anti-hoarding number is based on the
-following: at the moment of writing, the largest amount of ASNs a single
-organisation has is 100. Setting the number at ten times the current maximum
-usage will allow for growth but prevent a single organisation from consuming
-all resources.
-
+None.
